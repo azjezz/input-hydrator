@@ -4,12 +4,12 @@
 ![Static analysis status](https://github.com/azjezz/input-hydrator/workflows/static%20analysis/badge.svg?branch=develop)
 ![Security analysis status](https://github.com/azjezz/input-hydrator/workflows/security%20analysis/badge.svg?branch=develop)
 ![Coding standards status](https://github.com/azjezz/input-hydrator/workflows/coding%20standards/badge.svg?branch=develop)
-[![TravisCI Build Status](https://travis-ci.com/azjezz/input-hydrator.svg?branch=develop)](https://travis-ci.com/azjezz/psl)
-[![Coverage Status](https://coveralls.io/repos/github/azjezz/input-hydrator/badge.svg?branch=develop)](https://coveralls.io/github/azjezz/psl?branch=develop)
-[![Type Coverage](https://shepherd.dev/github/azjezz/input-hydrator/coverage.svg)](https://shepherd.dev/github/azjezz/psl)
-[![Total Downloads](https://poser.pugx.org/azjezz/input-hydrator/d/total.svg)](https://packagist.org/packages/azjezz/psl)
-[![Latest Stable Version](https://poser.pugx.org/azjezz/input-hydrator/v/stable.svg)](https://packagist.org/packages/azjezz/psl)
-[![License](https://poser.pugx.org/azjezz/input-hydrator/license.svg)](https://packagist.org/packages/azjezz/psl)
+[![TravisCI Build Status](https://travis-ci.com/azjezz/input-hydrator.svg?branch=develop)](https://travis-ci.com/azjezz/input-hydrator)
+[![Coverage Status](https://coveralls.io/repos/github/azjezz/input-hydrator/badge.svg?branch=develop)](https://coveralls.io/github/azjezz/input-hydrator?branch=develop)
+[![Type Coverage](https://shepherd.dev/github/azjezz/input-hydrator/coverage.svg)](https://shepherd.dev/github/azjezz/input-hydrator)
+[![Total Downloads](https://poser.pugx.org/azjezz/input-hydrator/d/total.svg)](https://packagist.org/packages/azjezz/input-hydrator)
+[![Latest Stable Version](https://poser.pugx.org/azjezz/input-hydrator/v/stable.svg)](https://packagist.org/packages/azjezz/input-hydrator)
+[![License](https://poser.pugx.org/azjezz/input-hydrator/license.svg)](https://packagist.org/packages/azjezz/input-hydrator)
 
 Input hydrator is a simple hydrator made for the sole purpose of hydrating data-transfer input objects.
 
