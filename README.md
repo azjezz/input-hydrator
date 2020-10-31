@@ -40,18 +40,19 @@ print $search->query;
 ```
 
 While hydrating objects, some exceptions might be thrown:
-    - `AzJezz\Input\Exception\TypeException`, this exception should result in 500 HTTP status code,
+  - `AzJezz\Input\Exception\TypeException`, this exception should result in 500 HTTP status code,
     as it represents an issue within the input class itself. such as the usage of a non-supported type,
     or missing type for a specific property.
-    - `AzJezz\Input\Exception\BadInputException`, this exception should result in a 400 HTTP status code,
+
+  - `AzJezz\Input\Exception\BadInputException`, this exception should result in a 400 HTTP status code,
     as it means that the supplied request data doesn't match the input DTO structure.
     
 Currently, InputHydrator is limited to a small set of types:
-    - `scalar` ( `string`, `int`, `float`, and `bool` )
-    - `null`
-    - *any object that implements `AzJezz\Input\InputInterface`*
-    
-Union types are supported as well for PHP >= 8.0, for example:
+  - `scalar` ( `string`, `int`, `float`, and `bool` )
+  - `null`
+  - *any object that implements `AzJezz\Input\InputInterface`*
+
+Union types are supported for PHP >= 8.0, for example:
 
 ```php
 use AzJezz\Input;
