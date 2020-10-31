@@ -99,10 +99,7 @@ final class Hydrator implements HydratorInterface
              * In case we don't have a value, check if the property has a default value, which we can use.
              */
             if ($property->isDefault() && $property->isInitialized($input)) {
-                /** @psalm-var scalar $value */
-                $value = $property->getValue($input);
-
-                return $value;
+                return $property->getValue($input);
             }
 
             /**
@@ -133,10 +130,10 @@ final class Hydrator implements HydratorInterface
                 }
             }
 
-            throw BadInputException::createForInvalidFieldType(
+            throw BadInputException::createForInvalidFieldTypeFromValue(
                 $field_name,
                 (string)$field_type_reflection,
-                get_debug_type($field_value),
+                $field_value,
             );
         }
         // @codeCoverIgnoreEnd
@@ -163,7 +160,7 @@ final class Hydrator implements HydratorInterface
                 // If the type is a subclass of input, we need to ensure that the value is an array.
                 if (!is_array($value)) {
                     // otherwise we throw a bad request exception
-                    throw BadInputException::createForInvalidFieldType($name, $type_as_string, get_debug_type($value));
+                    throw BadInputException::createForInvalidFieldTypeFromValue($name, $type_as_string, $value);
                 }
 
                 /**
@@ -250,6 +247,6 @@ final class Hydrator implements HydratorInterface
             }
         }
 
-        throw BadInputException::createForInvalidFieldType($name, $type_as_string, get_debug_type($value));
+        throw BadInputException::createForInvalidFieldTypeFromValue($name, $type_as_string, $value);
     }
 }
