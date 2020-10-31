@@ -20,7 +20,6 @@ Input hydrator is a simple hydrator made for the sole purpose of hydrating data-
 $ composer require azjezz/input-hydrator
 ```
 
-
 ## Example:
 
 ```php
@@ -40,14 +39,14 @@ print $search->query;
 ```
 
 While hydrating objects, some exceptions might be thrown:
-  - `AzJezz\Input\Exception\TypeException`, this exception should result in 500 HTTP status code,
+  - `AzJezz\Input\Exception\TypeException`: this exception should result in 500 HTTP status code,
     as it represents an issue within the input class itself. such as the usage of a non-supported type,
     or missing type for a specific property.
 
-  - `AzJezz\Input\Exception\BadInputException`, this exception should result in a 400 HTTP status code,
+  - `AzJezz\Input\Exception\BadInputException`: this exception should result in a 400 HTTP status code,
     as it means that the supplied request data doesn't match the input DTO structure.
     
-Currently, InputHydrator is limited to a small set of types:
+Currently, Input-Hydrator is limited to a small set of types:
   - `scalar` ( `string`, `int`, `float`, and `bool` )
   - `null`
   - *any object that implements `AzJezz\Input\InputInterface`*
@@ -70,7 +69,7 @@ final class Search implements Input\InputInterface
 }
 
 /**
- * $filter is optional, and is missing from the request, therfore it's gonna contain the default value.
+ * $filter is optional, and is missing from the request, therefore it's gonna contain the default value.
  *
  * @var Search $search
  */
@@ -92,7 +91,7 @@ $search = (new Input\Hydrator())->hydrate(Search::class, [
 ]);
 
 /**
- * $search->filter is now an instance of `Filter`
+ * $search->filter is now a string
  *
  * @var Search $search
  */
