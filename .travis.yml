@@ -6,7 +6,7 @@ os:
 
 jobs:
   include:
-    - php: nightly
+    - php: 7.4
   fast_finish: true
 
 cache:
@@ -19,7 +19,7 @@ before_install:
   - php --version
 
 install:
-  - composer update --no-interaction --no-progress --ignore-platform-req php
+  - composer update --no-interaction --no-progress
 
 script:
   - php vendor/bin/phpunit
