@@ -99,7 +99,10 @@ final class Hydrator implements HydratorInterface
              * In case we don't have a value, check if the property has a default value, which we can use.
              */
             if ($property->isDefault() && $property->isInitialized($input)) {
-                return $property->getValue($input);
+                /** @psalm-var scalar $value */
+                $value = $property->getValue($input);
+
+                return $value;
             }
 
             /**
