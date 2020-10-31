@@ -1,0 +1,43 @@
+name: "unit tests"
+
+on: ["pull_request", "push"]
+
+jobs:
+  unit-tests:
+    name: "unit tests"
+
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.4"
+          - "8.0"
+        operating-system:
+          - "ubuntu-latest"
+
+    steps:
+      - name: "checkout"
+        uses: "actions/checkout@v2"
+
+      - name: "installing PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "${{ matrix.php-version }}"
+          ini-values: memory_limit=-1
+          tools: composer:v2, cs2pr
+
+      - name: "caching dependencies"
+        uses: "actions/cache@v2"
+        with:
+          path: |
+            ~/.composer/cache
+            vendor
+          key: "php-${{ matrix.php-version }}"
+          restore-keys: "php-${{ matrix.php-version }}"
+
+      - name: "installing dependencies"
+        run: "composer install --no-interaction --no-progress --ignore-platform-req php"
+
+      - name: "running unit tests ( phpunit )"
+        run: "php vendor/bin/phpunit"
