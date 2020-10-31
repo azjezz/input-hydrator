@@ -120,7 +120,7 @@ final class Hydrator implements HydratorInterface
 
         /** @var mixed $field_value */
         $field_value = $request[$field_name];
-        // @codeCoverIgnoreStart
+        // @codeCoverageIgnoreStart
         if (class_exists(ReflectionUnionType::class) && $field_type_reflection instanceof ReflectionUnionType) {
             /** @var list<ReflectionType|ReflectionNamedType|ReflectionUnionType> $inner_types */
             $inner_types = $field_type_reflection->getTypes();
@@ -139,7 +139,7 @@ final class Hydrator implements HydratorInterface
                 $field_value,
             );
         }
-        // @codeCoverIgnoreEnd
+        // @codeCoverageIgnoreEnd
 
         // Now that we know the field exists, let's assert it's type.
         return $this->coerceType($property, $field_name, $field_value, $field_type_reflection);
