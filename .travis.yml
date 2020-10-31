@@ -13,8 +13,13 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
+before_install:
+  - composer self-update
+  - composer --version
+  - php --version
+
 install:
-  - composer install
+  - composer update --no-interaction --no-progress --ignore-platform-req php
 
 script:
   - php vendor/bin/phpunit
