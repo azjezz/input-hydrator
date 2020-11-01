@@ -14,6 +14,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
+        "infection/infection": "^0.19.2",
         "php-coveralls/php-coveralls": "^2.4",
         "phpunit/phpunit": "^9.4",
         "roave/security-advisories": "dev-master",
