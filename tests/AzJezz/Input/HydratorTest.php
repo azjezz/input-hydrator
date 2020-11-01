@@ -366,4 +366,16 @@ final class HydratorTest extends TestCase
             'fields' => []
         ]);
     }
+
+    public function testThrowsForInvalidType(): void
+    {
+        $hydrator = new Hydrator();
+
+        $this->expectException(BadInputException::class);
+        $this->expectExceptionMessage('field "query" has an incorrect type of "array", "string" was expected.');
+
+        $hydrator->hydrate(Fixture\Search::class, [
+            'query' => ['Hello, World!']
+        ]);
+    }
 }

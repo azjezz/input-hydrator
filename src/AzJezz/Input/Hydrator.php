@@ -193,7 +193,9 @@ final class Hydrator implements HydratorInterface
         }
 
         if ('string' === $type_as_string) {
-            return (string)$value;
+            if (is_string($value) || (is_object($value) && method_exists($value, '__toString'))) {
+                return (string) $value;
+            }
         }
 
         if ('int' === $type_as_string) {
