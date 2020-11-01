@@ -5,7 +5,7 @@
         ]
     },
     "logs": {
-        "text": "tests\/logs\/infection.log"
+        "text": "tests\/logs\/infection.log",
         "badge": {
             "branch": "develop"
         }
