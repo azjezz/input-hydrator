@@ -7,6 +7,7 @@
 [![TravisCI Build Status](https://travis-ci.com/azjezz/input-hydrator.svg?branch=develop)](https://travis-ci.com/azjezz/input-hydrator)
 [![Coverage Status](https://coveralls.io/repos/github/azjezz/input-hydrator/badge.svg?branch=develop)](https://coveralls.io/github/azjezz/input-hydrator?branch=develop)
 [![Type Coverage](https://shepherd.dev/github/azjezz/input-hydrator/coverage.svg)](https://shepherd.dev/github/azjezz/input-hydrator)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fazjezz%2Finput-hydrator%2Fdevelop)](https://dashboard.stryker-mutator.io/reports/github.com/azjezz/input-hydrator/develop)
 [![Total Downloads](https://poser.pugx.org/azjezz/input-hydrator/d/total.svg)](https://packagist.org/packages/azjezz/input-hydrator)
 [![Latest Stable Version](https://poser.pugx.org/azjezz/input-hydrator/v/stable.svg)](https://packagist.org/packages/azjezz/input-hydrator)
 [![License](https://poser.pugx.org/azjezz/input-hydrator/license.svg)](https://packagist.org/packages/azjezz/input-hydrator)

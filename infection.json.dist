@@ -6,6 +6,9 @@
     },
     "logs": {
         "text": "tests\/logs\/infection.log"
+        "badge": {
+            "branch": "develop"
+        }
     },
     "timeout": 15
 }
